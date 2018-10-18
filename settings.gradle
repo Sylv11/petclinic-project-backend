@@ -9,4 +9,4 @@
 
 rootProject.name = 'Petclinic'
 
-include 'petclinic-core'
+include ':petclinic-core',':petclinic-web'
