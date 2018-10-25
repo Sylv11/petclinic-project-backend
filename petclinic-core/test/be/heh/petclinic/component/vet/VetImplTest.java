@@ -12,7 +12,6 @@ class VetImplTest {
 
     @Test
     void test() {
-        assertEquals(1, vetImpl.countVet());
         ArrayList<Vet> vets = new VetComponentImpl().getVets();
         ArrayList<Vet> vetsComparator = new ArrayList<>();
         vetsComparator.add(new Vet("Urbain1", "Sylvain1", "Beau1"));

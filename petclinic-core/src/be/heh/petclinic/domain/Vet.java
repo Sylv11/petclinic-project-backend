@@ -3,6 +3,7 @@ package be.heh.petclinic.domain;
 
 public class Vet {
 
+    private int id;
     private String firstname;
     private String lastname;
     private String specialities;
@@ -11,6 +12,10 @@ public class Vet {
         this.firstname = firstname;
         this.lastname = lastname;
         this.specialities = specialities;
+    }
+
+    public int getId(){
+        return this.id;
     }
 
     public String getFirstname() {

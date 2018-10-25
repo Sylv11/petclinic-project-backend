@@ -11,13 +11,4 @@ public class VetComponentImpl implements VetComponent {
 
         return vets;
     }
-
-    public int countVet()
-    {
-        ArrayList<Vet> vets = new ArrayList<>();
-        
-        vets.add(new Vet("Urbain1", "Sylvain1", "Beau1"));
-
-        return vets.size();
-    }
 }
