@@ -3,7 +3,7 @@ package be.heh.petclinic.component.owner;
 import java.util.ArrayList;
 import be.heh.petclinic.domain.Owner;
 
-public class OwnerComponentImpl implements OwnerComponent {
+class OwnerComponentImpl implements OwnerComponent {
 
     private ArrayList<Owner> owners = new ArrayList<>();
     

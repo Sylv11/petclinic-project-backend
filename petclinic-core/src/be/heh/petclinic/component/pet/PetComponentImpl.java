@@ -3,7 +3,7 @@ package be.heh.petclinic.component.pet;
 import java.util.ArrayList;
 import be.heh.petclinic.domain.Pet;
 
-public class PetComponentImpl implements PetComponent {
+class PetComponentImpl implements PetComponent {
 
     private ArrayList<Pet> pets = new ArrayList<>();
     

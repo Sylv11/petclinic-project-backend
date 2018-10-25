@@ -12,6 +12,16 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.0.3'
 }
 
+task copyConfigXML(type: Copy) {
+    from ("src/be/heh/petclinic"){
+    include '**/*.xml'}
+
+    into ("build/classes/java/main/be/heh/petclinic")
+}
+
+build.finalizedBy(copyConfigXML)
+
+
 // These lines can be removed when you use the default directories src/main/kotlin and src/test/kotlin
 sourceSets {
     main.java.srcDirs += 'src'
