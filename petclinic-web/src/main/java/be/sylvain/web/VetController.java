@@ -1,6 +1,6 @@
 package be.sylvain.web;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,15 +17,14 @@ public class VetController {
     @Autowired
     private VetComponent vetComponent;
 
-    
     @RequestMapping("/vets")
-    public ResponseEntity<ArrayList<Vet>> getVets() {
-         ArrayList<Vet> vets = this.vetComponent.getVets();
+    public ResponseEntity<List<Vet>> getVets() {
+        List<Vet> vets = this.vetComponent.getVets();
 
-         if(!vets.isEmpty()){
-             return new ResponseEntity<>(vets,HttpStatus.OK);
-         }else{
-             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-         }
+        if (!vets.isEmpty()) {
+            return new ResponseEntity<List<Vet>>(vets, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<List<Vet>>(HttpStatus.NOT_FOUND);
+        }
     }
 }

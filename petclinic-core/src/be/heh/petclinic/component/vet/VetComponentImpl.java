@@ -1,14 +1,19 @@
 package be.heh.petclinic.component.vet;
 
-import java.util.ArrayList;
+import javax.sql.DataSource;
+
+import java.util.List;
 import be.heh.petclinic.domain.Vet;
 
 class VetComponentImpl implements VetComponent {
-    public ArrayList<Vet> getVets() {
-        ArrayList<Vet> vets = new ArrayList<>();
-        
-        vets.add(new Vet("Urbain1", "Sylvain1", "NAC"));
 
-        return vets;
+    private VetDAO vetDAO;
+
+    public VetComponentImpl(DataSource datasource) {
+        vetDAO = new VetDAO(datasource);
+    }
+
+    public List<Vet> getVets() {
+        return this.vetDAO.getVets();
     }
 }

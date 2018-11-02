@@ -6,12 +6,12 @@ public class Vet {
     private int id;
     private String firstname;
     private String lastname;
-    private String specialities;
+    private String speciality;
 
-    public Vet(String firstname, String lastname, String specialities) {
+    public Vet(String firstname, String lastname, String speciality) {
         this.firstname = firstname;
         this.lastname = lastname;
-        this.specialities = specialities;
+        this.speciality = speciality;
     }
 
     public int getId(){
@@ -26,8 +26,8 @@ public class Vet {
         return this.lastname;
     }
 
-    public String getSpecialities() {
-        return this.specialities;
+    public String getSpeciality() {
+        return this.speciality;
     }
 
 }

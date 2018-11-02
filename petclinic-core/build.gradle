@@ -10,6 +10,9 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.3'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.0.3'
+    runtime 'mysql:mysql-connector-java:8.0.12'
+    compile("org.springframework:spring-jdbc:3.2.4.RELEASE")
+    compile ('commons-dbcp:commons-dbcp:1.4') 
 }
 
 task copyConfigXML(type: Copy) {

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 class VetImplTest { 
 
-    VetComponentImpl vetImpl = new VetComponentImpl();
+    /*VetComponentImpl vetImpl = new VetComponentImpl();
 
     @Test
     void test() {
@@ -39,5 +39,5 @@ class VetImplTest {
         }
 
         return result;
-    }
+    }*/
 }

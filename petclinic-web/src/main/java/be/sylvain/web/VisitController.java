@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import be.heh.petclinic.component.visit.*;
-import be.heh.petclinic.domain.Visit;;
+import be.heh.petclinic.domain.Visit;
 
 
 @RestController

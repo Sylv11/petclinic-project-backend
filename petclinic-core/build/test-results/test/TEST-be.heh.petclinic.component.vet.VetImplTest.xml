@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="be.heh.petclinic.component.vet.VetImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-10-18T10:05:03" hostname="DESKTOP-8KD61NS" time="0.018">
-  <properties/>
-  <testcase name="test()" classname="be.heh.petclinic.component.vet.VetImplTest" time="0.018"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

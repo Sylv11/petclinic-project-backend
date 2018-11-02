@@ -9,6 +9,8 @@ class VisitComponentImpl implements VisitComponent {
     
     public VisitComponentImpl(){
         this.visits.add(new Visit(1,1,"2019-12-23","Controle general"));
+        this.visits.add(new Visit(2,1,"2019-12-23","Controle general suite"));
+        this.visits.add(new Visit(3,1,"2019-12-23","Controle general fin"));
     }
 
     public ArrayList<Visit> getVisits() {

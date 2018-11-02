@@ -1,9 +1,9 @@
 package be.heh.petclinic.component.vet;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import be.heh.petclinic.domain.Vet;
 
 public interface VetComponent {
-    public ArrayList<Vet> getVets();
+    public List<Vet> getVets();
 }
