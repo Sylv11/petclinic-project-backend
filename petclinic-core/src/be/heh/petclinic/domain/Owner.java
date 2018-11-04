@@ -10,13 +10,15 @@ public class Owner {
     private String city;
     private String telephone;
 
-    public Owner(int id, String firstname, String lastname, String address, String city, String telehone ) {
+    public Owner(){}
+
+    public Owner(int id, String firstname, String lastname, String address, String city, String telephone ) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.address = address;
         this.city = city;
-        this.telephone = telehone;
+        this.telephone = telephone;
     }
 
     public int getId(){
@@ -35,12 +37,11 @@ public class Owner {
         return this.address;
     }
 
-    public String getTelehone(){
-        return this.telephone;
-    }
-
     public String getCity(){
         return this.city;
     }
 
+    public String getTelephone(){
+        return this.telephone;
+    }
 }

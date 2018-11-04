@@ -14,6 +14,6 @@ public class VetDAO {
 
     public List<Vet> getVets() {
         JdbcTemplate template = new JdbcTemplate(dataSource);
-        return template.query("SELECT * FROM vet", new VetRowMapper());
+        return template.query("SELECT * FROM vets", new VetRowMapper());
     }
 }

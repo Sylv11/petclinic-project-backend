@@ -1,8 +1,10 @@
-INSERT INTO vet (lastname, firstname, speciality)
+USE petclinic;
+
+INSERT INTO vets (lastname, firstname, speciality)
 VALUES ("James", "James", "none");
 
-INSERT INTO vet (lastname, firstname, speciality)
+INSERT INTO vets (lastname, firstname, speciality)
 VALUES ("Helen", "Helen", "radiology");
 
-INSERT INTO vet (lastname, firstname, speciality)
+INSERT INTO vets (lastname, firstname, speciality)
 VALUES ("Linda", "Linda", "surgery");

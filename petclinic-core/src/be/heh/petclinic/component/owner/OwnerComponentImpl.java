@@ -1,40 +1,30 @@
 package be.heh.petclinic.component.owner;
 
-import java.util.ArrayList;
+import javax.sql.DataSource;
+import java.util.List;
 import be.heh.petclinic.domain.Owner;
 
 class OwnerComponentImpl implements OwnerComponent {
 
-    private ArrayList<Owner> owners = new ArrayList<>();
-    
-    public OwnerComponentImpl(){
-        this.owners.add(new Owner(1,"Urbain1", "Sylvain1", "Rue de Binche","Mons","044444444"));
+    private OwnerDAO ownerDAO;
+
+    public OwnerComponentImpl(DataSource datasource) {
+        ownerDAO = new OwnerDAO(datasource);
     }
 
-    public ArrayList<Owner> getOwners() {
-        return this.owners;
+    public List<Owner> getOwners() {
+        return this.ownerDAO.getOwners();
     }
 
-    public Owner getOwner(int id){
-        for (Owner o : this.owners) {
-            if(o.getId() == id){
-                return o;
-            }
-        }
-
-        return null;
+    public Owner getOwner(int id) {
+        return this.ownerDAO.getOwner(id);
     }
 
-    public void updateOwner(int id, Owner owner){
-        for (int i = 0; i < this.owners.size(); i++) {
-            if(this.owners.get(i).getId() == id){
-                this.owners.remove(i);
-                this.owners.add(owner);
-            }
-        }
+    public void updateOwner(int id, Owner owner) {
+        this.ownerDAO.updateOwner(id, owner);
     }
 
-    public void addOwner(Owner owner){
-        this.owners.add(owner);
+    public void addOwner(Owner owner) {
+        this.ownerDAO.addOwner(owner);
     }
 }
