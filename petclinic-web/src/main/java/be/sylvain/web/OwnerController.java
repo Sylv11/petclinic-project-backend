@@ -45,7 +45,7 @@ public class OwnerController {
 
     @PutMapping("/updateOwner/{ownerId}")
     public ResponseEntity<String> updateOwner(@PathVariable int ownerId, @RequestBody Owner ownerUpdated) {
-       
+
         if (this.ownerComponent.getOwner(Integer.valueOf(ownerId)) != null) {
             this.ownerComponent.updateOwner(ownerId, ownerUpdated);
             return new ResponseEntity<String>("Owner updated", HttpStatus.OK);
@@ -56,7 +56,7 @@ public class OwnerController {
 
     @PostMapping("/addOwner")
     public ResponseEntity<String> addOwner(@RequestBody Owner newOwner) {
-       
+
         if (this.ownerComponent.getOwner(newOwner.getId()) == null) {
             this.ownerComponent.addOwner(newOwner);
             return new ResponseEntity<String>("Owner added", HttpStatus.OK);

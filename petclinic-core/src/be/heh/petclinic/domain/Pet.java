@@ -9,6 +9,8 @@ public class Pet {
     private String dateBirth;
     private String type;
 
+    public Pet() {};
+
     public Pet(int id, int ownerId, String name, String dateBirth, String type) {
         this.id = id;
         this.ownerId = ownerId;
