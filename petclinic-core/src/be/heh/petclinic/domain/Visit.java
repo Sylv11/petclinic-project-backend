@@ -8,6 +8,8 @@ public class Visit {
     private String date;
     private String description;
 
+    public Visit() {}
+
     public Visit(int id, int petId, String date, String description) {
         this.id = id;
         this.petId = petId;

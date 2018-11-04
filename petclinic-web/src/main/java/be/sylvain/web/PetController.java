@@ -22,7 +22,7 @@ public class PetController {
     private PetComponent petComponent;
 
     @GetMapping("/getPetsOfOwner/{ownerId}")
-    public ResponseEntity<List<Pet>> getOwners(@PathVariable int ownerId) {
+    public ResponseEntity<List<Pet>> getPetsOfOwner(@PathVariable int ownerId) {
         List<Pet> pets = this.petComponent.getPetsOfOwner(Integer.valueOf(ownerId));
 
         if (!pets.isEmpty()) {
@@ -33,7 +33,7 @@ public class PetController {
     }
 
     @GetMapping("/getPet/{id}")
-    public ResponseEntity<Pet> getPetsOfOwner(@PathVariable int id) {
+    public ResponseEntity<Pet> getPet(@PathVariable int id) {
         Pet pet = this.petComponent.getPet(Integer.valueOf(id));
 
         if (pet != null) {

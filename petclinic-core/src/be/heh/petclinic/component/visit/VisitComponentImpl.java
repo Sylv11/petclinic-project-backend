@@ -1,43 +1,29 @@
 package be.heh.petclinic.component.visit;
 
-import java.util.ArrayList;
+import java.util.List;
+
+import javax.sql.DataSource;
+
 import be.heh.petclinic.domain.Visit;
 
 class VisitComponentImpl implements VisitComponent {
 
-    private ArrayList<Visit> visits = new ArrayList<>();
-    
-    public VisitComponentImpl(){
-        this.visits.add(new Visit(1,1,"2019-12-23","Controle general"));
-        this.visits.add(new Visit(2,1,"2019-12-23","Controle general suite"));
-        this.visits.add(new Visit(3,1,"2019-12-23","Controle general fin"));
+    private VisitDAO visitDAO;
+
+    public VisitComponentImpl(DataSource datasource) {
+        visitDAO = new VisitDAO(datasource);
     }
 
-    public ArrayList<Visit> getVisits() {
-        return this.visits;
+    public List<Visit> getVisitsOfPet(int petId) {
+        return this.visitDAO.getVisitsOfPet(petId);
     }
 
-    public ArrayList<Visit> getVisitOfPet(int petId){
-        ArrayList<Visit> visitsOfPet = new ArrayList<Visit>();
-        for (Visit v : this.visits) {
-            if(v.getPetId() == petId){
-                visitsOfPet.add(v);
-            }
-        }
-        return visitsOfPet;
+    public Visit getVisit(int id) {
+        return this.visitDAO.getVisit(id);
     }
 
-    public Visit getVisit(int id){
-        for (Visit v : this.visits) {
-            if(v.getId() == id){
-                return v;
-            }
-        }
-        return null;
-    }
-
-    public void addVisit(Visit visit){
-        this.visits.add(visit);
+    public void addVisit(Visit visit) {
+        this.visitDAO.addVisit(visit);
     }
 
 }
