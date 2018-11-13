@@ -7,6 +7,7 @@ import be.heh.petclinic.domain.Owner;
 public interface OwnerComponent {
     public List<Owner> getOwners();
     public Owner getOwner(int id);
+    public Owner getOwnerByLastname(String lastname);
     public void updateOwner(int id, Owner owner);
     public void addOwner(Owner owner);
 }

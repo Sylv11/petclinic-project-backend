@@ -43,6 +43,17 @@ public class OwnerController {
         }
     }
 
+    @GetMapping("/getOwnerByLastname/{ownerLastname}")
+    public ResponseEntity<Owner> getOwner(@PathVariable String ownerLastname) {
+        Owner owner = this.ownerComponent.getOwnerByLastname(String.valueOf(ownerLastname));
+
+        if (owner != null) {
+            return new ResponseEntity<Owner>(owner, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<Owner>(HttpStatus.NOT_FOUND);
+        }
+    }
+
     @PutMapping("/updateOwner/{ownerId}")
     public ResponseEntity<String> updateOwner(@PathVariable int ownerId, @RequestBody Owner ownerUpdated) {
 

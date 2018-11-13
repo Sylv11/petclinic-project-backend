@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset tricarico:5
+--changeset sylvain:5
 
 USE petclinic;
 

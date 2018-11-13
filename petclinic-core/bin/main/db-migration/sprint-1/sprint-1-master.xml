@@ -5,13 +5,13 @@
                     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="db.sql" relativeToChangelogFile="true"/>
-    <include file="schemaVet.sql" relativeToChangelogFile="true"/>
-    <include file="addVets.sql" relativeToChangelogFile="true"/>    
-    <include file="schemaOwner.sql" relativeToChangelogFile="true"/>
-    <include file="addOwners.sql" relativeToChangelogFile="true"/> 
-    <include file="schemaPet.sql" relativeToChangelogFile="true"/>
-    <include file="addPets.sql" relativeToChangelogFile="true"/> 
-    <include file="schemaVisit.sql" relativeToChangelogFile="true"/>
-    <include file="addVisits.sql" relativeToChangelogFile="true"/> 
+    <include file="schemas/schemaVet.sql" relativeToChangelogFile="true"/>
+    <include file="addRows/addVets.sql" relativeToChangelogFile="true"/>    
+    <include file="schemas/schemaOwner.sql" relativeToChangelogFile="true"/>
+    <include file="addRows/addOwners.sql" relativeToChangelogFile="true"/> 
+    <include file="schemas/schemaPet.sql" relativeToChangelogFile="true"/>
+    <include file="addRows/addPets.sql" relativeToChangelogFile="true"/> 
+    <include file="schemas/schemaVisit.sql" relativeToChangelogFile="true"/>
+    <include file="addRows/addVisits.sql" relativeToChangelogFile="true"/> 
 
  </databaseChangeLog>

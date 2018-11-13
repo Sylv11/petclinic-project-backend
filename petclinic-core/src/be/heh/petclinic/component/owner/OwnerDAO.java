@@ -38,6 +38,24 @@ public class OwnerDAO {
         return owner;
     }
 
+    public Owner getOwnerByLastname(String lastname) {
+        JdbcTemplate template = new JdbcTemplate(dataSource);
+        Owner owner = null;
+
+        try {
+
+            owner = (Owner) template.queryForObject("SELECT * FROM owners WHERE lastname = ?", new Object[] { lastname },
+                    new OwnerRowMapper());
+
+        } catch (InvalidResultSetAccessException e) {
+            e.printStackTrace();
+        } catch (DataAccessException e) {
+            e.printStackTrace();
+        }
+
+        return owner;
+    }
+
     public void updateOwner(int id, Owner owner) {
         JdbcTemplate template = new JdbcTemplate(dataSource);
 

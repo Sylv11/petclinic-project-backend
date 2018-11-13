@@ -20,6 +20,10 @@ class OwnerComponentImpl implements OwnerComponent {
         return this.ownerDAO.getOwner(id);
     }
 
+    public Owner getOwnerByLastname(String lastname) {
+        return this.ownerDAO.getOwnerByLastname(lastname);
+    }
+
     public void updateOwner(int id, Owner owner) {
         this.ownerDAO.updateOwner(id, owner);
     }
