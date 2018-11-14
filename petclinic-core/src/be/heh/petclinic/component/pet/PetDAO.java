@@ -55,13 +55,13 @@ public class PetDAO {
         }
     }
 
-    public void addPet(int ownerId, Pet pet) {
+    public void addPet(Pet pet) {
         JdbcTemplate template = new JdbcTemplate(dataSource);
 
         try {
 
-            template.update("INSERT INTO pets(ownerId, name, dateBirth, type) VALUES (?, ?, ?, ?) WHERE ownerId = ?",
-                    pet.getOwnerId(), pet.getName(), pet.getDateBirth(), pet.getType(), ownerId);
+            template.update("INSERT INTO pets(ownerId, name, dateBirth, type) VALUES (?, ?, ?, ?)",
+                    pet.getOwnerId(), pet.getName(), pet.getDateBirth(), pet.getType());
 
         } catch (InvalidResultSetAccessException e) {
             e.printStackTrace();
