@@ -55,11 +55,12 @@ public class OwnerController {
     }
 
     @PutMapping("/updateOwner/{ownerId}")
-    public ResponseEntity<String> updateOwner(@PathVariable int ownerId, @RequestBody Owner ownerUpdated) {
+    public ResponseEntity<?> updateOwner(@PathVariable int ownerId, @RequestBody Owner ownerUpdated) {
 
         if (this.ownerComponent.getOwner(Integer.valueOf(ownerId)) != null) {
             this.ownerComponent.updateOwner(ownerId, ownerUpdated);
-            return new ResponseEntity<String>("Owner updated", HttpStatus.OK);
+            Owner owner = this.ownerComponent.getOwner(ownerId);
+            return new ResponseEntity<Owner>(owner, HttpStatus.OK);
         } else {
             return new ResponseEntity<String>("This owner doesn't exist", HttpStatus.NOT_FOUND);
         }

@@ -54,11 +54,11 @@ public class PetController {
         }
     }
 
-    @PostMapping("/addPet")
-    public ResponseEntity<String> addPet(@RequestBody Pet newPet) {
+    @PostMapping("/addPet/{ownerId}")
+    public ResponseEntity<String> addPet(@PathVariable int ownerId, @RequestBody Pet newPet) {
 
         if (this.petComponent.getPet(newPet.getId()) == null) {
-            this.petComponent.addPet(newPet);
+            this.petComponent.addPet(ownerId, newPet);
             return new ResponseEntity<String>("Pet added", HttpStatus.OK);
         } else {
             return new ResponseEntity<String>("This pet already exists", HttpStatus.NOT_FOUND);

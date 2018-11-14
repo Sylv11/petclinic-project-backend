@@ -8,5 +8,5 @@ public interface PetComponent {
     public Pet getPet(int id);
     public List<Pet> getPetsOfOwner(int ownerId);
     public void updatePet(int id, Pet pet);
-    public void addPet(Pet pet);
+    public void addPet(int ownerId, Pet pet);
 }
