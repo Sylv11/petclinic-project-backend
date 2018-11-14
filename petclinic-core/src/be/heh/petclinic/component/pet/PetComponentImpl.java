@@ -27,7 +27,7 @@ class PetComponentImpl implements PetComponent {
     }
 
     public void addPet(int ownerId, Pet pet) {
-        this.petDAO.addPet(pet);
+        this.petDAO.addPet(ownerId, pet);
     }
 
 }
