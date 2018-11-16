@@ -21,14 +21,14 @@ public class VisitController {
     private VisitComponent visitComponent;
 
     @GetMapping("/getVisitsOfPet/{petId}")
-    public ResponseEntity<List<Visit>> getVisitsOfPet(@PathVariable int petId) {
+    public ResponseEntity<List<Visit>> getVisitsOfPet(@PathVariable String petId) {
         List<Visit> visits = this.visitComponent.getVisitsOfPet(Integer.valueOf(petId));
 
         if (!visits.isEmpty()) {
             return new ResponseEntity<List<Visit>>(visits, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<List<Visit>>(HttpStatus.NOT_FOUND);
         }
+        
+        return new ResponseEntity<List<Visit>>(HttpStatus.NOT_FOUND);
     }
 
     @GetMapping("/getVisit/{id}")
