@@ -1,3 +1,0 @@
-
-
-CREATE SCHEMA `petclinic` DEFAULT CHARACTER SET utf8;
